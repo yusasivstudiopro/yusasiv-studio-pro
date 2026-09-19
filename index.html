@@ -7,7 +7,7 @@
 <link rel="icon" href="logo.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--black:#050607;--panel:#11161b;--white:#fff;--muted:#aab3bb;--line:#263039;--sky:#55c7ff;--sky-soft:rgba(85,199,255,.12);--max:1180px;}
+:root{--black:#050607;--panel:#11161b;--white:#fff;--muted:#aab3bb;--line:#263039;--sky:#55c7ff;--max:1180px;}
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{font-family:"Outfit",sans-serif;background:var(--black);color:var(--white);line-height:1.6;}
@@ -19,7 +19,7 @@ h1,h2,.section-title,.cta h2{font-family:"Playfair Display",serif;font-weight:70
 .section{padding:100px 0;}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:18px;color:var(--sky);font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;}
 .eyebrow::before{content:"";width:28px;height:2px;background:var(--sky);}
-.section-title{max-width:760px;margin-bottom:18px;font-size:clamp(34px,5vw,58px);line-height:1.05;letter-spacing:-.03em;}
+.section-title{max-width:760px;margin-bottom:18px;font-size:clamp(34px,5vw,58px);line-height:1.05;}
 .section-text{max-width:680px;color:var(--muted);font-size:17px;}
 header{position:sticky;top:0;z-index:1000;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(5,6,7,.94);}
 .nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px;}
@@ -30,7 +30,7 @@ header{position:sticky;top:0;z-index:1000;border-bottom:1px solid rgba(255,255,2
 .menu-btn{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:9px;background:var(--panel);color:#fff;font-size:20px;}
 .hero{min-height:calc(100vh - 78px);display:grid;align-items:center;}
 .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:70px;align-items:center;}
-.hero h1{margin-bottom:25px;font-size:clamp(42px,7vw,78px);line-height:.98;letter-spacing:-.04em;}
+.hero h1{margin-bottom:25px;font-size:clamp(42px,7vw,78px);line-height:.98;}
 .hero h1 span{color:var(--sky);}
 .hero-description{margin-bottom:32px;color:#b9c2c9;font-size:18px;}
 .hero-actions{display:flex;flex-wrap:wrap;gap:12px;}
@@ -288,12 +288,14 @@ footer{padding:45px 0 25px;background:#030405;}
 </div>
 </div>
 </footer>
-<a class="wa" href="https://wa.me/2347084496771" target="_blank" rel="noopener">WA</a>
+<a class="wa" href="#" id="waBtn">WA</a>
 <a href="index.html" class="top" id="topBtn">↑</a>
 <script>
 document.getElementById("menuBtn").addEventListener("click",function(){document.getElementById("navLinks").classList.toggle("open");});
 document.querySelectorAll(".nav-links a").forEach(function(a){a.addEventListener("click",function(){document.getElementById("navLinks").classList.remove("open");});});
 window.addEventListener("scroll",function(){document.getElementById("topBtn").classList.toggle("show",window.scrollY>500);});
+function lockBooking(e){if(e)e.preventDefault();alert("Booking is locked until the website balance is paid.");return false;}
+document.getElementById("waBtn").addEventListener("click",lockBooking);
 </script>
 </body>
 </html>
