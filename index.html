@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="YUSASIV Studio Pro — live production, streaming and equipment rental in Lagos.">
 <title>YUSASIV Studio Pro | Live Production & Streaming</title>
 <link rel="icon" href="logo.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -23,7 +22,7 @@ button{font:inherit;cursor:pointer;}
 .section-text{max-width:680px;color:var(--muted);font-size:17px;}
 header{position:sticky;top:0;z-index:1000;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(5,6,7,.94);}
 .nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px;}
-.brand-logo{height:200px;width:auto;display:block;object-fit:contain;}
+.brand-logo{height:200px;width:auto;max-width:420px;display:block;object-fit:contain;}
 .nav-links{display:flex;align-items:center;gap:18px;}
 .nav-links a{color:#d9dfe4;font-size:13px;font-weight:700;}
 .nav-cta{padding:11px 17px;border-radius:8px;background:var(--sky);color:#001018!important;}
@@ -66,7 +65,7 @@ header{position:sticky;top:0;z-index:1000;border-bottom:1px solid rgba(255,255,2
 .equip-group > h3{font-size:18px;color:var(--sky);letter-spacing:.1em;text-transform:uppercase;}
 .equipment-grid{grid-template-columns:repeat(3,1fr);}
 .equipment-card{overflow:hidden;border:1px solid var(--line);border-radius:14px;background:#0d1115;}
-.equipment-card img{width:100%;height:170px;object-fit:cover;}
+.equipment-card img{width:100%;height:170px;object-fit:cover;background:#0a0d10;}
 .equipment-info{padding:18px;}
 .equipment-info h3{margin-bottom:6px;font-size:16px;}
 .equipment-info p{color:var(--muted);font-size:12px;}
@@ -90,6 +89,7 @@ footer{padding:45px 0 25px;background:#030405;}
 .top{position:fixed;right:20px;bottom:88px;width:44px;height:44px;display:grid;place-items:center;border:1px solid var(--line);border-radius:9px;background:#0c1115;color:var(--sky);opacity:0;pointer-events:none;}
 .top.show{opacity:1;pointer-events:auto;}
 @media(max-width:980px){
+.brand-logo{height:88px;max-width:220px;}
 .nav-links{display:none;position:absolute;top:78px;left:20px;right:20px;flex-direction:column;padding:10px;border:1px solid var(--line);border-radius:12px;background:#090c0f;}
 .nav-links.open{display:flex;}
 .nav-links a{padding:13px;}
@@ -190,8 +190,8 @@ footer{padding:45px 0 25px;background:#030405;}
 <h3>Camera</h3>
 <div class="equipment-grid">
 <article class="equipment-card"><img alt="FS5" src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800&q=80"><div class="equipment-info"><h3>Sony PXW-FS5</h3><p>4K production camera.</p></div></article>
-<article class="equipment-card"><img alt="FS7" src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=800&q=80"><div class="equipment-info"><h3>Sony PXW-FS7</h3><p>4K production camera.</p></div></article>
-<article class="equipment-card"><img alt="FX9" src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=800&q=80"><div class="equipment-info"><h3>Sony PXW-FX9</h3><p>6K production camera.</p></div></article>
+<article class="equipment-card"><img alt="FS7" src="https://commons.wikimedia.org/wiki/Special:FilePath/DP_Mark_Schulze_with_Sony_FS7_camera_and_Convergent_Design_Odyssey_7Q%2B_recorder_monitor.jpg"><div class="equipment-info"><h3>Sony PXW-FS7</h3><p>4K production camera.</p></div></article>
+<article class="equipment-card"><img alt="FX9" src="https://commons.wikimedia.org/wiki/Special:FilePath/Sony_PXW-FX9_XDCAM_-_Front_with_Lens.jpg"><div class="equipment-info"><h3>Sony PXW-FX9</h3><p>6K production camera.</p></div></article>
 <article class="equipment-card"><img alt="PMW-300" src="https://images.unsplash.com/photo-1495707903485-333d18880944?auto=format&fit=crop&w=800&q=80"><div class="equipment-info"><h3>Sony PMW-300</h3><p>Broadcast camcorder.</p></div></article>
 <article class="equipment-card"><img alt="Z150" src="https://images.unsplash.com/photo-1519183077517-83af3d990024?auto=format&fit=crop&w=800&q=80"><div class="equipment-info"><h3>Sony PXW-Z150</h3><p>4K handheld camcorder.</p></div></article>
 <article class="equipment-card"><div class="equipment-info"><h3>And more</h3><p>Additional Sony and support cameras on request.</p></div></article>
@@ -200,9 +200,9 @@ footer{padding:45px 0 25px;background:#030405;}
 <div class="equip-group">
 <h3>Visual Mixer</h3>
 <div class="equipment-grid">
-<article class="equipment-card"><img alt="DV12" src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=800&q=80"><div class="equipment-info"><h3>DataVideo 12 Channel</h3><p>12-channel visual mixer.</p></div></article>
+<article class="equipment-card"><img alt="DV12" src="https://commons.wikimedia.org/wiki/Special:FilePath/Datavideo_Technologies_SE-3000_HD-SD_16-channel_Digital_Video_Switcher_(2013-09-26_12.14.23_@pxhere_1085560).jpg"><div class="equipment-info"><h3>DataVideo 12 Channel</h3><p>12-channel visual mixer.</p></div></article>
 <article class="equipment-card"><img alt="GS8" src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=800&q=80"><div class="equipment-info"><h3>GoStream 8 Channel</h3><p>8-channel live mixer.</p></div></article>
-<article class="equipment-card"><img alt="DV6" src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=800&q=80"><div class="equipment-info"><h3>DataVideo 6 Channel</h3><p>6-channel visual mixer.</p></div></article>
+<article class="equipment-card"><img alt="DV6" src="https://commons.wikimedia.org/wiki/Special:FilePath/Datavideo_HS-4000_Portable_Video_Switcher_20250726112238.jpg"><div class="equipment-info"><h3>DataVideo 6 Channel</h3><p>6-channel visual mixer.</p></div></article>
 <article class="equipment-card"><div class="equipment-info"><h3>GoStream 4 Channel</h3><p>4-channel mixer for smaller setups.</p></div></article>
 <article class="equipment-card"><div class="equipment-info"><h3>And more</h3><p>Other mixers available on request.</p></div></article>
 </div>
