@@ -7,7 +7,7 @@
 <link rel="icon" href="logo.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--black:#050607;--panel:#11161b;--white:#fff;--muted:#aab3bb;--line:#263039;--sky:#55c7ff;--sky-soft:rgba(85,199,255,.12);--max:1180px;}
+:root{--black:#050607;--panel:#11161b;--white:#fff;--muted:#aab3bb;--line:#263039;--sky:#55c7ff;--max:1180px;}
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:"Outfit",sans-serif;background:var(--black);color:var(--white);line-height:1.6;}
 img{max-width:100%;display:block;}
@@ -145,14 +145,16 @@ footer{padding:45px 0 25px;background:#030405;}
 </div>
 </div>
 </footer>
-<a class="wa" href="https://wa.me/2347084496771" target="_blank" rel="noopener">WA</a>
+<a class="wa" href="#" id="waBtn">WA</a>
 <script>
 document.getElementById("menuBtn").addEventListener("click",function(){document.getElementById("navLinks").classList.toggle("open");});
-document.getElementById("quoteForm").addEventListener("submit",function(e){
-e.preventDefault();
-var t="Hello YUSASIV Studio Pro,\n\nName: "+document.getElementById("name").value+"\nPhone: "+document.getElementById("phone").value+"\nPackage / Event: "+document.getElementById("eventType").value+"\n\n"+document.getElementById("message").value;
-window.open("https://wa.me/2347084496771?text="+encodeURIComponent(t),"_blank");
-});
+function lockBooking(e){
+  if(e) e.preventDefault();
+  alert("Booking is locked until the website balance is paid.");
+  return false;
+}
+document.getElementById("quoteForm").addEventListener("submit",lockBooking);
+document.getElementById("waBtn").addEventListener("click",lockBooking);
 </script>
 </body>
 </html>
