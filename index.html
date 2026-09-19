@@ -3,306 +3,296 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="YUSASIV Studio Pro provides professional multi-camera livestreaming, live production, equipment rental and post-production services in Lagos, Nigeria.">
+<meta name="description" content="YUSASIV Studio Pro — live production, streaming and equipment rental in Lagos.">
 <title>YUSASIV Studio Pro | Live Production & Streaming</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23050607'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Arial' font-size='32' fill='%2355c7ff'%3EY%3C/text%3E%3C/svg%3E">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{--black:#050607;--panel:#11161b;--white:#fff;--muted:#aab3bb;--line:#263039;--sky:#55c7ff;--sky-soft:rgba(85,199,255,.12);--max:1180px;}
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{font-family:"Manrope",sans-serif;background:var(--black);color:var(--white);line-height:1.6;}
+img{max-width:100%;display:block;}
 a{color:inherit;text-decoration:none;}
 button{font:inherit;cursor:pointer;}
 .container{width:min(calc(100% - 40px),var(--max));margin:auto;}
 .section{padding:100px 0;}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:18px;color:var(--sky);font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;}
 .eyebrow::before{content:"";width:28px;height:2px;background:var(--sky);}
-.section-title{max-width:720px;margin-bottom:18px;font-size:clamp(34px,5vw,58px);line-height:1.05;letter-spacing:-.04em;}
+.section-title{max-width:760px;margin-bottom:18px;font-size:clamp(34px,5vw,58px);line-height:1.05;letter-spacing:-.04em;}
 .section-text{max-width:680px;color:var(--muted);font-size:17px;}
-header{position:sticky;top:0;z-index:1000;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(5,6,7,.94);backdrop-filter:blur(16px);}
-.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:28px;}
+header{position:sticky;top:0;z-index:1000;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(5,6,7,.94);}
+.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px;}
 .logo{display:flex;align-items:center;gap:11px;font-weight:800;}
 .logo-mark{width:42px;height:42px;display:grid;place-items:center;border:1px solid rgba(85,199,255,.5);border-radius:10px;background:var(--sky-soft);color:var(--sky);font-size:19px;font-weight:800;}
 .logo-text strong{display:block;font-size:15px;letter-spacing:.12em;}
 .logo-text span{display:block;margin-top:3px;color:var(--muted);font-size:9px;letter-spacing:.22em;}
-.nav-links{display:flex;align-items:center;gap:25px;}
+.nav-links{display:flex;align-items:center;gap:18px;}
 .nav-links a{color:#d9dfe4;font-size:13px;font-weight:700;}
-.nav-links a:hover{color:var(--sky);}
 .nav-cta{padding:11px 17px;border-radius:8px;background:var(--sky);color:#001018!important;}
 .menu-btn{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:9px;background:var(--panel);color:#fff;font-size:20px;}
-.hero{min-height:calc(100vh - 78px);display:grid;align-items:center;position:relative;overflow:hidden;}
-.hero::before{content:"";position:absolute;width:650px;height:650px;right:-260px;top:-220px;border-radius:50%;background:radial-gradient(circle,rgba(85,199,255,.18),transparent 68%);}
-.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:70px;align-items:center;position:relative;z-index:1;}
-.hero h1{margin-bottom:25px;font-size:clamp(45px,7vw,82px);line-height:.98;letter-spacing:-.055em;}
+.hero{min-height:calc(100vh - 78px);display:grid;align-items:center;}
+.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:70px;align-items:center;}
+.hero h1{margin-bottom:25px;font-size:clamp(42px,7vw,78px);line-height:.98;letter-spacing:-.055em;}
 .hero h1 span{color:var(--sky);}
-.hero-description{max-width:650px;margin-bottom:32px;color:#b9c2c9;font-size:18px;}
+.hero-description{margin-bottom:32px;color:#b9c2c9;font-size:18px;}
 .hero-actions{display:flex;flex-wrap:wrap;gap:12px;}
 .btn{min-height:50px;display:inline-flex;align-items:center;justify-content:center;padding:13px 21px;border-radius:8px;font-size:14px;font-weight:800;}
 .btn-primary{background:var(--sky);color:#001018;}
 .btn-secondary{border:1px solid var(--line);background:#101419;color:#fff;}
-.hero-visual{min-height:470px;display:grid;place-items:center;}
-.camera-frame{width:min(100%,500px);aspect-ratio:4/3;position:relative;border:1px solid #27333c;border-radius:20px;background:linear-gradient(145deg,#161d22,#080a0c);}
-.camera-frame::before{content:"LIVE";position:absolute;top:18px;left:18px;padding:6px 10px;border-radius:5px;background:#fff;color:#111;font-size:10px;font-weight:800;}
-.camera-frame::after{content:"REC 00:42:18";position:absolute;right:18px;top:20px;color:var(--sky);font-size:10px;font-weight:800;}
-.lens{width:210px;height:210px;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);border:12px solid #29333a;border-radius:50%;background:radial-gradient(circle,#050607 0 25%,#102531 26% 39%,#55c7ff 40% 42%,#10171c 43% 62%,#27333a 63% 69%,#07090a 70%);}
-.camera-side{position:absolute;right:-28px;top:50%;width:70px;height:125px;transform:translateY(-50%);border:1px solid #27333c;border-left:0;border-radius:0 14px 14px 0;background:#151b20;}
-.stat-card{position:absolute;bottom:-30px;left:-35px;padding:18px 20px;border:1px solid #27333c;border-radius:12px;background:#0c0f12;}
-.stat-card strong{display:block;font-size:28px;color:var(--sky);}
-.stat-card span{color:var(--muted);font-size:11px;font-weight:700;}
+.hero-photo{width:100%;height:460px;object-fit:cover;border-radius:20px;border:1px solid #27333c;}
 .trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#090b0d;}
 .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);}
 .trust-item{padding:26px 18px;text-align:center;border-right:1px solid var(--line);}
 .trust-item:last-child{border-right:0;}
 .trust-item strong{display:block;font-size:22px;}
 .trust-item span{color:var(--muted);font-size:11px;font-weight:700;text-transform:uppercase;}
-.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:48px;}
-.service-card{min-height:230px;display:flex;flex-direction:column;justify-content:space-between;padding:24px;border:1px solid var(--line);border-radius:14px;background:#101419;}
+.services-grid,.equipment-grid,.why-grid,.packages-grid,.work-grid{display:grid;gap:14px;margin-top:28px;}
+.services-grid{grid-template-columns:repeat(4,1fr);}
+.service-card{min-height:190px;padding:24px;border:1px solid var(--line);border-radius:14px;background:#101419;}
 .service-number{color:var(--sky);font-size:11px;font-weight:800;}
-.service-card h3{margin:18px 0 8px;font-size:19px;}
+.service-card h3{margin:14px 0 8px;font-size:18px;}
 .service-card p{color:var(--muted);font-size:13px;}
-.service-arrow{align-self:flex-end;color:var(--sky);}
 .about{background:#090b0d;}
 .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center;}
-.about-visual{min-height:430px;display:flex;align-items:flex-end;padding:30px;border:1px solid var(--line);border-radius:18px;background:#0d1216;}
-.about-box{width:100%;padding:25px;border:1px solid #293640;border-radius:13px;background:rgba(5,6,7,.9);}
-.about-box span{display:block;margin-bottom:8px;color:var(--sky);font-size:11px;font-weight:800;letter-spacing:.15em;}
-.about-box strong{font-size:26px;line-height:1.15;}
-.equipment-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:45px;}
+.about-visual img{width:100%;height:430px;object-fit:cover;border-radius:18px;}
+.packages{background:#080a0c;}
+.packages-grid{grid-template-columns:repeat(3,1fr);}
+.package{padding:28px;border:1px solid var(--line);border-radius:16px;background:#0d1115;}
+.package.featured{border-color:rgba(85,199,255,.6);}
+.package span{display:block;color:var(--sky);font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;}
+.package h3{font-size:26px;margin-bottom:8px;}
+.package .price{color:var(--sky);font-size:22px;font-weight:800;margin-bottom:16px;}
+.package ul{list-style:none;color:var(--muted);font-size:14px;margin-bottom:22px;}
+.package li{padding:7px 0;border-bottom:1px solid #1c252c;}
+.equip-groups{display:grid;gap:48px;margin-top:40px;}
+.equip-group > h3{font-size:18px;color:var(--sky);letter-spacing:.1em;text-transform:uppercase;}
+.equipment-grid{grid-template-columns:repeat(3,1fr);}
 .equipment-card{overflow:hidden;border:1px solid var(--line);border-radius:14px;background:#0d1115;}
-.equipment-image{height:180px;display:grid;place-items:center;background:#11171c;}
-.equipment-image::after{content:"YSP";color:rgba(255,255,255,.08);font-size:58px;font-weight:800;}
-.equipment-info{padding:20px;}
-.equipment-info h3{margin-bottom:6px;font-size:17px;}
+.equipment-card img{width:100%;height:170px;object-fit:cover;}
+.equipment-info{padding:18px;}
+.equipment-info h3{margin-bottom:6px;font-size:16px;}
 .equipment-info p{color:var(--muted);font-size:12px;}
 .portfolio{background:#090b0d;}
-.project{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;margin-top:48px;}
-.project-visual{min-height:380px;display:flex;align-items:flex-end;padding:25px;border:1px solid var(--line);border-radius:18px;background:#10151a;}
-.project-screen{width:100%;padding:20px;border:1px solid #31404a;border-radius:12px;background:#060708;}
-.project-screen-top{display:flex;justify-content:space-between;margin-bottom:25px;color:var(--muted);font-size:10px;font-weight:800;}
-.project-screen-title{margin-bottom:15px;color:var(--sky);font-size:26px;font-weight:800;}
-.project-info h3{margin-bottom:20px;font-size:clamp(30px,4vw,48px);line-height:1.05;}
-.project-meta{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:25px;}
-.meta{padding:15px;border:1px solid var(--line);border-radius:9px;background:#0e1317;}
-.meta span{display:block;margin-bottom:4px;color:var(--muted);font-size:10px;text-transform:uppercase;}
-.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:45px;}
+.work-grid{grid-template-columns:repeat(3,1fr);}
+.work-card{overflow:hidden;border:1px solid var(--line);border-radius:14px;background:#0d1115;}
+.work-card img{width:100%;height:210px;object-fit:cover;}
+.work-card div{padding:20px;}
+.why-grid{grid-template-columns:repeat(3,1fr);}
 .why-card{padding:25px;border-top:2px solid var(--sky);background:#0e1216;}
-.why-card h3{margin-bottom:9px;font-size:17px;}
-.why-card p{color:var(--muted);font-size:13px;}
-.cta{padding:85px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#080a0c;}
+.cta{padding:85px 0;border-top:1px solid var(--line);background:#080a0c;}
 .cta-inner{display:flex;align-items:center;justify-content:space-between;gap:40px;}
-.cta h2{max-width:700px;font-size:clamp(34px,5vw,62px);line-height:1;}
+.cta h2{max-width:700px;font-size:clamp(34px,5vw,56px);line-height:1;}
 footer{padding:45px 0 25px;background:#030405;}
 .footer-grid{display:grid;grid-template-columns:1.4fr .8fr .8fr;gap:45px;padding-bottom:35px;border-bottom:1px solid var(--line);}
 .footer-title{margin-bottom:12px;font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;}
-.footer-text{color:var(--muted);font-size:13px;}
+.footer-text,.footer-links a{color:var(--muted);font-size:13px;}
 .footer-links{display:grid;gap:9px;}
-.footer-links a{color:var(--muted);font-size:13px;}
 .footer-bottom{display:flex;justify-content:space-between;padding-top:22px;color:#737d85;font-size:11px;}
-.top{position:fixed;right:20px;bottom:20px;width:44px;height:44px;display:grid;place-items:center;border:1px solid var(--line);border-radius:9px;background:#0c1115;color:var(--sky);opacity:0;pointer-events:none;}
+.wa{position:fixed;right:20px;bottom:20px;z-index:1100;width:58px;height:58px;display:grid;place-items:center;border-radius:50%;background:#25D366;color:#fff;font-weight:800;}
+.top{position:fixed;right:20px;bottom:88px;width:44px;height:44px;display:grid;place-items:center;border:1px solid var(--line);border-radius:9px;background:#0c1115;color:var(--sky);opacity:0;pointer-events:none;}
 .top.show{opacity:1;pointer-events:auto;}
 @media(max-width:980px){
-  .nav-links{display:none;position:absolute;top:78px;left:20px;right:20px;flex-direction:column;padding:10px;border:1px solid var(--line);border-radius:12px;background:#090c0f;}
-  .nav-links.open{display:flex;}
-  .nav-links a{padding:13px;}
-  .menu-btn{display:block;}
-  .hero-grid,.about-grid,.project{grid-template-columns:1fr;}
-  .services-grid,.equipment-grid{grid-template-columns:1fr 1fr;}
-  .why-grid{grid-template-columns:1fr 1fr;}
-  .cta-inner,.footer-grid{flex-direction:column;grid-template-columns:1fr 1fr;}
+.nav-links{display:none;position:absolute;top:78px;left:20px;right:20px;flex-direction:column;padding:10px;border:1px solid var(--line);border-radius:12px;background:#090c0f;}
+.nav-links.open{display:flex;}
+.nav-links a{padding:13px;}
+.menu-btn{display:block;}
+.hero-grid,.about-grid,.packages-grid,.why-grid,.footer-grid{grid-template-columns:1fr;}
+.services-grid,.equipment-grid,.work-grid{grid-template-columns:1fr 1fr;}
+.cta-inner{flex-direction:column;}
+.hero-photo,.about-visual img{height:320px;}
 }
-@media(max-width:620px){
-  .services-grid,.equipment-grid,.why-grid,.trust-grid,.project-meta,.footer-grid{grid-template-columns:1fr;}
-  .footer-bottom{flex-direction:column;gap:10px;}
-}
+@media(max-width:620px){.services-grid,.equipment-grid,.work-grid,.trust-grid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
 <header>
-  <div class="container nav">
-    <a href="index.html" class="logo">
-      <div class="logo-mark">Y</div>
-      <div class="logo-text"><strong>YUSASIV</strong><span>STUDIO PRO</span></div>
-    </a>
-    <nav class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <a href="#services">Services</a>
-      <a href="#equipment">Equipment</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#about">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="contact.html" class="nav-cta">Book a Production</a>
-    </nav>
-    <button class="menu-btn" id="menuBtn" type="button">☰</button>
-  </div>
+<div class="container nav">
+<a href="index.html" class="logo"><div class="logo-mark">Y</div><div class="logo-text"><strong>YUSASIV</strong><span>STUDIO PRO</span></div></a>
+<nav class="nav-links" id="navLinks">
+<a href="index.html">Home</a>
+<a href="#services">Services</a>
+<a href="#packages">Packages</a>
+<a href="#equipment">Equipment</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#about">About</a>
+<a href="contact.html">Contact</a>
+<a href="contact.html" class="nav-cta">Book a Production</a>
+</nav>
+<button class="menu-btn" id="menuBtn" type="button">☰</button>
+</div>
 </header>
 <main>
 <section class="hero" id="home">
-  <div class="container hero-grid">
-    <div>
-      <div class="eyebrow">Live Production • Streaming • Media</div>
-      <h1>WE CAPTURE.<br>WE CREATE.<br><span>WE DELIVER.</span></h1>
-      <p class="hero-description">Professional live production, multi-camera streaming, equipment rental and post-production services for concerts, conferences, religious events and more.</p>
-      <div class="hero-actions">
-        <a href="#services" class="btn btn-primary">Explore Our Services</a>
-        <a href="contact.html" class="btn btn-secondary">Book a Production</a>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="camera-frame">
-        <div class="lens"></div>
-        <div class="camera-side"></div>
-        <div class="stat-card"><strong>6+</strong><span>YEARS EXPERIENCE</span></div>
-      </div>
-    </div>
-  </div>
+<div class="container hero-grid">
+<div>
+<div class="eyebrow">Live Production • Streaming • Media</div>
+<h1>WE CAPTURE.<br>WE CREATE.<br><span>WE DELIVER.</span></h1>
+<p class="hero-description">Professional live production, multi-camera streaming, equipment rental and post-production in Lagos.</p>
+<div class="hero-actions">
+<a href="#packages" class="btn btn-primary">See Packages</a>
+<a href="contact.html" class="btn btn-secondary">Book a Production</a>
+</div>
+</div>
+<img class="hero-photo" alt="Live production" src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1400&q=80">
+</div>
 </section>
 <section class="trust">
-  <div class="container trust-grid">
-    <div class="trust-item"><strong>2–10+</strong><span>Camera Coverage</span></div>
-    <div class="trust-item"><strong>4K</strong><span>High Resolution</span></div>
-    <div class="trust-item"><strong>Multi</strong><span>Platform Streaming</span></div>
-    <div class="trust-item"><strong>24/7</strong><span>Technical Backup</span></div>
-  </div>
+<div class="container trust-grid">
+<div class="trust-item"><strong>2–10+</strong><span>Camera Coverage</span></div>
+<div class="trust-item"><strong>4K</strong><span>High Resolution</span></div>
+<div class="trust-item"><strong>Multi</strong><span>Platform Streaming</span></div>
+<div class="trust-item"><strong>24/7</strong><span>Technical Backup</span></div>
+</div>
 </section>
 <section class="section" id="services">
-  <div class="container">
-    <div class="eyebrow">What We Do</div>
-    <h2 class="section-title">Production built around your event.</h2>
-    <p class="section-text">From camera operation and live switching to streaming, audio and post-production, YUSASIV Studio Pro handles the technical side so your audience can focus on the experience.</p>
-    <div class="services-grid">
-      <article class="service-card"><span class="service-number">01</span><div><h3>Multi-Camera Livestreaming</h3><p>Professional multi-camera coverage with multiple angles and broadcast-grade live production.</p></div><span class="service-arrow">↗</span></article>
-      <article class="service-card"><span class="service-number">02</span><div><h3>Live Production Crew</h3><p>Experienced technical directors, camera operators, system engineers and live stream managers.</p></div><span class="service-arrow">↗</span></article>
-      <article class="service-card"><span class="service-number">03</span><div><h3>Live Video Switching</h3><p>Real-time camera switching and professional graphics for a polished live production.</p></div><span class="service-arrow">↗</span></article>
-      <article class="service-card"><span class="service-number">04</span><div><h3>Professional Audio</h3><p>Professional audio capture and mixing integrated into the live production workflow.</p></div><span class="service-arrow">↗</span></article>
-      <article class="service-card"><span class="service-number">05</span><div><h3>Multi-Platform Streaming</h3><p>Stream simultaneously to YouTube, Facebook, Instagram and custom RTMP destinations.</p></div><span class="service-arrow">↗</span></article>
-      <article class="service-card"><span class="service-number">06</span><div><h3>Internet Redundancy</h3><p>Dual ISP, MTN 5G, Airtel 4G and backup connectivity solutions for dependable streaming.</p></div><span class="service-arrow">↗</span></article>
-      <article class="service-card"><span class="service-number">07</span><div><h3>Recording & Archiving</h3><p>Full HD and 4K recording with SSD backup for reliable event preservation.</p></div><span class="service-arrow">↗</span></article>
-      <article class="service-card"><span class="service-number">08</span><div><h3>Post-Production</h3><p>Professional editing, highlights, promotional clips and post-event content.</p></div><span class="service-arrow">↗</span></article>
-    </div>
-  </div>
+<div class="container">
+<div class="eyebrow">What We Do</div>
+<h2 class="section-title">Production built around your event.</h2>
+<div class="services-grid">
+<article class="service-card"><span class="service-number">01</span><h3>Multi-Camera Livestreaming</h3><p>Broadcast-grade coverage with multiple angles.</p></article>
+<article class="service-card"><span class="service-number">02</span><h3>Live Production Crew</h3><p>Directors, camera operators and stream engineers.</p></article>
+<article class="service-card"><span class="service-number">03</span><h3>Live Video Switching</h3><p>Real-time switching and on-screen graphics.</p></article>
+<article class="service-card"><span class="service-number">04</span><h3>Professional Audio</h3><p>Capture and mix built into the live workflow.</p></article>
+<article class="service-card"><span class="service-number">05</span><h3>Multi-Platform Streaming</h3><p>YouTube, Facebook, Instagram and custom RTMP.</p></article>
+<article class="service-card"><span class="service-number">06</span><h3>Internet Redundancy</h3><p>Dual ISP, MTN 5G and Airtel backup.</p></article>
+<article class="service-card"><span class="service-number">07</span><h3>Recording & Archiving</h3><p>Full HD and 4K with SSD backup.</p></article>
+<article class="service-card"><span class="service-number">08</span><h3>Post-Production</h3><p>Edits, highlights and promo cuts.</p></article>
+</div>
+</div>
+</section>
+<section class="section packages" id="packages">
+<div class="container">
+<div class="eyebrow">Packages</div>
+<h2 class="section-title">Clear production options. Quote on request.</h2>
+<div class="packages-grid">
+<article class="package"><span>Starter</span><h3>2-Camera Live</h3><div class="price">From ₦250,000</div><ul><li>2 cameras + operator</li><li>Live switch + graphics</li><li>1 platform stream</li><li>Full event recording</li></ul><a href="contact.html" class="btn btn-secondary">Request Quote</a></article>
+<article class="package featured"><span>Most booked</span><h3>4–6 Camera Production</h3><div class="price">From ₦650,000</div><ul><li>4–6 cameras + crew</li><li>Technical director</li><li>Multi-platform stream</li><li>Internet redundancy</li><li>Highlight edit</li></ul><a href="contact.html" class="btn btn-primary">Request Quote</a></article>
+<article class="package"><span>Full house</span><h3>Broadcast + Post</h3><div class="price">Custom quote</div><ul><li>Full crew and kit</li><li>Audio + lighting support</li><li>Multi-destination stream</li><li>Same-week post package</li></ul><a href="contact.html" class="btn btn-secondary">Talk to Us</a></article>
+</div>
+</div>
 </section>
 <section class="section about" id="about">
-  <div class="container about-grid">
-    <div class="about-visual">
-      <div class="about-box">
-        <span>YUSASIV STUDIO PRO</span>
-        <strong>EVERY ANGLE.<br>EVERY MOMENT.<br>SEAMLESSLY DELIVERED.</strong>
-      </div>
-    </div>
-    <div>
-      <div class="eyebrow">About YUSASIV</div>
-      <h2 class="section-title">Experience meets technical precision.</h2>
-      <p class="section-text">Yusasiv Studio Pro is a leading provider of multi-camera livestreaming services, delivering high-quality, broadcast-grade live video for concerts, conferences, religious events and more.</p>
-      <p class="section-text" style="margin-top:18px;">With over six years of experience, Yusasiv Studio Pro combines technical expertise with creative storytelling to ensure every event is captured from every angle and streamed flawlessly to any platform.</p>
-      <a href="contact.html" class="btn btn-primary" style="margin-top:28px;">Book a Production</a>
-    </div>
-  </div>
+<div class="container about-grid">
+<div class="about-visual"><img alt="Studio" src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&q=80"></div>
+<div>
+<div class="eyebrow">About YUSASIV</div>
+<h2 class="section-title">Experience meets technical precision.</h2>
+<p class="section-text">Broadcast-grade live video for concerts, conferences, religious events and brand productions across Lagos.</p>
+<a href="contact.html" class="btn btn-primary" style="margin-top:28px;">Book a Production</a>
+</div>
+</div>
 </section>
 <section class="section" id="equipment">
-  <div class="container">
-    <div class="eyebrow">Equipment Rental</div>
-    <h2 class="section-title">Professional gear for your vision.</h2>
-    <p class="section-text">Access professional production equipment for livestreaming, event coverage, recording and broadcast workflows.</p>
-    <div class="equipment-grid">
-      <article class="equipment-card"><div class="equipment-image"></div><div class="equipment-info"><h3>Sony PXW-FS7</h3><p>Professional 4K production camera.</p></div></article>
-      <article class="equipment-card"><div class="equipment-image"></div><div class="equipment-info"><h3>Hollyland Pyro S</h3><p>Professional wireless video transmission.</p></div></article>
-      <article class="equipment-card"><div class="equipment-image"></div><div class="equipment-info"><h3>GoStream Deck</h3><p>Professional live streaming production equipment.</p></div></article>
-      <article class="equipment-card"><div class="equipment-image"></div><div class="equipment-info"><h3>Unisheen Capture Card</h3><p>Reliable video capture for production workflows.</p></div></article>
-    </div>
-  </div>
+<div class="container">
+<div class="eyebrow">Equipment</div>
+<h2 class="section-title">Cameras, mixers and streaming tools.</h2>
+<p class="section-text">Available for live production and hire.</p>
+<div class="equip-groups">
+<div class="equip-group">
+<h3>Camera</h3>
+<div class="equipment-grid">
+<article class="equipment-card"><img alt="FS5" src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800&q=80"><div class="equipment-info"><h3>Sony PXW-FS5</h3><p>4K production camera.</p></div></article>
+<article class="equipment-card"><img alt="FS7" src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=800&q=80"><div class="equipment-info"><h3>Sony PXW-FS7</h3><p>4K production camera.</p></div></article>
+<article class="equipment-card"><img alt="FX9" src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=800&q=80"><div class="equipment-info"><h3>Sony PXW-FX9</h3><p>6K production camera.</p></div></article>
+<article class="equipment-card"><img alt="PMW-300" src="https://images.unsplash.com/photo-1495707903485-333d18880944?auto=format&fit=crop&w=800&q=80"><div class="equipment-info"><h3>Sony PMW-300</h3><p>Broadcast camcorder.</p></div></article>
+<article class="equipment-card"><img alt="Z150" src="https://images.unsplash.com/photo-1519183077517-83af3d990024?auto=format&fit=crop&w=800&q=80"><div class="equipment-info"><h3>Sony PXW-Z150</h3><p>4K handheld camcorder.</p></div></article>
+<article class="equipment-card"><div class="equipment-info"><h3>And more</h3><p>Additional Sony and support cameras on request.</p></div></article>
+</div>
+</div>
+<div class="equip-group">
+<h3>Visual Mixer</h3>
+<div class="equipment-grid">
+<article class="equipment-card"><img alt="DV12" src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=800&q=80"><div class="equipment-info"><h3>DataVideo 12 Channel</h3><p>12-channel visual mixer.</p></div></article>
+<article class="equipment-card"><img alt="GS8" src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=800&q=80"><div class="equipment-info"><h3>GoStream 8 Channel</h3><p>8-channel live mixer.</p></div></article>
+<article class="equipment-card"><img alt="DV6" src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=800&q=80"><div class="equipment-info"><h3>DataVideo 6 Channel</h3><p>6-channel visual mixer.</p></div></article>
+<article class="equipment-card"><div class="equipment-info"><h3>GoStream 4 Channel</h3><p>4-channel mixer for smaller setups.</p></div></article>
+<article class="equipment-card"><div class="equipment-info"><h3>And more</h3><p>Other mixers available on request.</p></div></article>
+</div>
+</div>
+<div class="equip-group">
+<h3>Streaming Tool</h3>
+<div class="equipment-grid">
+<article class="equipment-card"><div class="equipment-info"><h3>Dedicated Internet</h3><p>Production-grade connectivity for live streams.</p></div></article>
+<article class="equipment-card"><div class="equipment-info"><h3>Streaming System</h3><p>Encode and multi-destination output.</p></div></article>
+<article class="equipment-card"><div class="equipment-info"><h3>Dual Input Capture Card</h3><p>SDI / HDMI capture for the live workflow.</p></div></article>
+<article class="equipment-card"><div class="equipment-info"><h3>Sound Card</h3><p>Clean audio into the mix and stream.</p></div></article>
+<article class="equipment-card"><div class="equipment-info"><h3>SDI & HDMI Signal Cable</h3><p>Camera, mixer and record paths.</p></div></article>
+<article class="equipment-card"><div class="equipment-info"><h3>And more</h3><p>Extra streaming tools on request.</p></div></article>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section class="section portfolio" id="portfolio">
-  <div class="container">
-    <div class="eyebrow">Our Work</div>
-    <h2 class="section-title">Featured project.</h2>
-    <div class="project">
-      <div class="project-visual">
-        <div class="project-screen">
-          <div class="project-screen-top"><span>YUSASIV LIVE PRODUCTION</span><span>LIVE / 2026</span></div>
-          <div class="project-screen-title">LAGOS BUSINESS<br>OF FILM SUMMIT</div>
-        </div>
-      </div>
-      <div class="project-info">
-        <h3>The Lagos Business of Film Summit</h3>
-        <div class="project-meta">
-          <div class="meta"><span>Date</span><strong>January 30, 2026</strong></div>
-          <div class="meta"><span>Client</span><strong>Miss Katty</strong></div>
-          <div class="meta"><span>Event Type</span><strong>Conference</strong></div>
-          <div class="meta"><span>Role</span><strong>Technical Director</strong></div>
-        </div>
-        <p class="section-text">YUSASIV Studio Pro handled live video mixing and overall technical execution, delivering a professional multi-camera production for the event.</p>
-        <a href="contact.html" class="btn btn-secondary" style="margin-top:28px;">Book a Production</a>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<div class="eyebrow">Our Work</div>
+<h2 class="section-title">Selected productions.</h2>
+<div class="work-grid">
+<article class="work-card"><img alt="Summit" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1000&q=80"><div><h3>Lagos Business of Film Summit</h3><p>Technical direction and live mix. Jan 2026.</p></div></article>
+<article class="work-card"><img alt="Concert" src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=1000&q=80"><div><h3>Live Concert Coverage</h3><p>Multi-camera concert capture and stream.</p></div></article>
+<article class="work-card"><img alt="Church" src="https://images.unsplash.com/photo-1438232992991-995b3898abe4?auto=format&fit=crop&w=1000&q=80"><div><h3>Religious Event Production</h3><p>Livestream with redundant internet and archive.</p></div></article>
+</div>
+</div>
 </section>
 <section class="section">
-  <div class="container">
-    <div class="eyebrow">Why YUSASIV</div>
-    <h2 class="section-title">Built for professionals. Trusted for results.</h2>
-    <div class="why-grid">
-      <article class="why-card"><h3>Proven Track Record</h3><p>More than six years of experience delivering professional live production and streaming services.</p></article>
-      <article class="why-card"><h3>Experienced Team & Equipment</h3><p>Skilled production personnel supported by professional cameras, switchers, audio and streaming systems.</p></article>
-      <article class="why-card"><h3>Customized Solutions</h3><p>Production setups are designed around the size, format and requirements of each event.</p></article>
-      <article class="why-card"><h3>Reliable Internet Backup</h3><p>Backup connectivity solutions help protect livestreams from unexpected network interruptions.</p></article>
-      <article class="why-card"><h3>Comprehensive Service</h3><p>From cameras and audio to switching, streaming, recording and post-production.</p></article>
-      <article class="why-card"><h3>Competitive Pricing</h3><p>Professional production solutions designed to provide value without compromising quality.</p></article>
-    </div>
-  </div>
+<div class="container">
+<div class="eyebrow">Why YUSASIV</div>
+<h2 class="section-title">Built for professionals. Trusted for results.</h2>
+<div class="why-grid">
+<article class="why-card"><h3>Proven Track Record</h3><p>More than six years of live production.</p></article>
+<article class="why-card"><h3>Crew and Kit</h3><p>Operators, directors and broadcast equipment.</p></article>
+<article class="why-card"><h3>Custom Setups</h3><p>Designed around venue, format and runtime.</p></article>
+<article class="why-card"><h3>Internet Backup</h3><p>Redundant links so the stream stays up.</p></article>
+<article class="why-card"><h3>Full Service</h3><p>Cameras, audio, switch, stream, record and post.</p></article>
+<article class="why-card"><h3>Clear Pricing</h3><p>Package starting points, then a confirmed quote.</p></article>
+</div>
+</div>
 </section>
 <section class="cta">
-  <div class="container cta-inner">
-    <h2>Your event deserves more than just a camera. It deserves a production.</h2>
-    <a href="contact.html" class="btn btn-primary">Book a Production</a>
-  </div>
+<div class="container cta-inner">
+<h2>Your event deserves more than a camera. It deserves a production.</h2>
+<a href="contact.html" class="btn btn-primary">Book a Production</a>
+</div>
 </section>
 </main>
 <footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <div class="logo"><div class="logo-mark">Y</div><div class="logo-text"><strong>YUSASIV</strong><span>STUDIO PRO</span></div></div>
-        <p class="footer-text" style="margin-top:18px;">Professional live production, multi-camera streaming, equipment rental and post-production services.</p>
-      </div>
-      <div>
-        <div class="footer-title">Quick Links</div>
-        <div class="footer-links">
-          <a href="index.html">Home</a>
-          <a href="#services">Services</a>
-          <a href="#equipment">Equipment</a>
-          <a href="contact.html">Contact</a>
-        </div>
-      </div>
-      <div>
-        <div class="footer-title">Contact</div>
-        <div class="footer-links">
-          <a href="tel:+2347084496771">+234 708 449 6771</a>
-          <a href="mailto:yusasivstudio@gmail.com">yusasivstudio@gmail.com</a>
-          <a href="https://instagram.com/yusasiv_studio_pro" target="_blank" rel="noopener">@yusasiv_studio_pro</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 YUSASIV Studio Pro. All rights reserved.</span>
-      <span>Professional Live Production & Streaming</span>
-    </div>
-  </div>
+<div class="container">
+<div class="footer-grid">
+<div>
+<div class="logo"><div class="logo-mark">Y</div><div class="logo-text"><strong>YUSASIV</strong><span>STUDIO PRO</span></div></div>
+<p class="footer-text" style="margin-top:18px;">Live production and streaming. Oregun, Ikeja, Lagos.</p>
+</div>
+<div>
+<div class="footer-title">Quick Links</div>
+<div class="footer-links">
+<a href="index.html">Home</a>
+<a href="#packages">Packages</a>
+<a href="#equipment">Equipment</a>
+<a href="contact.html">Contact</a>
+</div>
+</div>
+<div>
+<div class="footer-title">Contact</div>
+<div class="footer-links">
+<a href="tel:+2347084496771">+234 708 449 6771</a>
+<a href="mailto:yusasivstudio@gmail.com">yusasivstudio@gmail.com</a>
+<a href="https://instagram.com/yusasiv_studio_pro" target="_blank" rel="noopener">@yusasiv_studio_pro</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 YUSASIV Studio Pro. All rights reserved.</span>
+<span>Professional Live Production & Streaming</span>
+</div>
+</div>
 </footer>
+<a class="wa" href="https://wa.me/2347084496771" target="_blank" rel="noopener">WA</a>
 <a href="index.html" class="top" id="topBtn">↑</a>
 <script>
-var menuBtn = document.getElementById("menuBtn");
-var navLinks = document.getElementById("navLinks");
-menuBtn.addEventListener("click", function(){ navLinks.classList.toggle("open"); });
-document.querySelectorAll(".nav-links a").forEach(function(link){
-  link.addEventListener("click", function(){ navLinks.classList.remove("open"); });
-});
-var topBtn = document.getElementById("topBtn");
-window.addEventListener("scroll", function(){
-  if (window.scrollY > 500) topBtn.classList.add("show");
-  else topBtn.classList.remove("show");
-});
+document.getElementById("menuBtn").addEventListener("click",function(){document.getElementById("navLinks").classList.toggle("open");});
+document.querySelectorAll(".nav-links a").forEach(function(a){a.addEventListener("click",function(){document.getElementById("navLinks").classList.remove("open");});});
+window.addEventListener("scroll",function(){document.getElementById("topBtn").classList.toggle("show",window.scrollY>500);});
 </script>
 </body>
 </html>
