@@ -89,6 +89,8 @@ footer{padding:45px 0 25px;background:#030405;}
 .wa{position:fixed;right:20px;bottom:20px;z-index:1100;width:58px;height:58px;display:grid;place-items:center;border-radius:50%;background:#25D366;color:#fff;font-weight:800;}
 .top{position:fixed;right:20px;bottom:88px;width:44px;height:44px;display:grid;place-items:center;border:1px solid var(--line);border-radius:9px;background:#0c1115;color:var(--sky);opacity:0;pointer-events:none;}
 .top.show{opacity:1;pointer-events:auto;}
+#unpaid-lock{position:fixed;inset:0;z-index:3000;display:grid;place-items:center;background:rgba(5,6,7,.42);pointer-events:none;}
+.unpaid-lock-text{text-align:center;color:#55c7ff;font-family:"Playfair Display",serif;font-weight:700;font-size:clamp(32px,7vw,84px);line-height:.95;letter-spacing:-.03em;text-transform:uppercase;text-shadow:0 8px 40px rgba(0,0,0,.7);}
 @media(max-width:980px){
 .brand-logo{height:88px;max-width:220px;}
 .nav-links{display:none;position:absolute;top:78px;left:20px;right:20px;flex-direction:column;padding:10px;border:1px solid var(--line);border-radius:12px;background:#090c0f;}
@@ -104,6 +106,7 @@ footer{padding:45px 0 25px;background:#030405;}
 </style>
 </head>
 <body>
+<div id="unpaid-lock"><div class="unpaid-lock-text">PREVIEW ONLY<br>PAY THE BALANCE<br>TO LIFT THIS</div></div>
 <header>
 <div class="container nav">
 <a href="index.html"><img src="logo.jpg" alt="YUSASIV Studio Pro" class="brand-logo"></a>
