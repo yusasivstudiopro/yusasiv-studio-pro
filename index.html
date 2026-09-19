@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="YUSASIV Studio Pro provides professional multi-camera livestreaming, live production, equipment rental and post-production services in Lagos, Nigeria.">
+<title>YUSASIV Studio Pro | Live Production & Streaming</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --black:#050607;
+  --black-soft:#0c0f12;
+  --panel:#11161b;
+  --white:#ffffff;
+  --muted:#aab3bb;
+  --line:#263039;
+  --sky:#55c7ff;
+  --sky-dark:#1aa8e8;
+  --sky-soft:rgba(85,199,255,.12);
+  --max:1180px;
+  --radius:18px;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:"Manrope",sans-serif;
+  background:var(--black);
+  color:var(--white);
+  line-height:1.6;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button,
+input,
+select,
+textarea{
+  font:inherit;
+}
+
+button{
+  cursor:pointer;
+}
+
+.container{
+  width:min(calc(100% - 40px),var(--max));
+  margin:auto;
+}
+
+.section{
+  padding:100px 0;
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:18px;
+  color:var(--sky);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+
+.eyebrow::before{
+  content:"";
+  width:28px;
+  height:2px;
+  background:var(--sky);
+}
+
+.section-title{
+  max-width:720px;
+  margin-bottom:18px;
+  font-size:clamp(34px,5vw,58px);
+  line-height:1.05;
+  letter-spacing:-.04em;
+}
+
+.section-text{
+  max-width:680px;
+  color:var(--muted);
+  font-size:17px;
+}
+
+/* HEADER */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  background:rgba(5,6,7,.94);
+  backdrop-filter:blur(16px);
+}
+
+.nav{
+  min-height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:28px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  font-weight:800;
+  letter-spacing:.04em;
+}
+
+.logo-mark{
+  width:42px;
+  height:42px;
+  display:grid;
+  place-items:center;
+  border:1px solid rgba(85,199,255,.5);
+  border-radius:10px;
+  background:var(--sky-soft);
+  color:var(--sky);
+  font-size:19px;
+  font-weight:800;
+}
+
+.logo-text{
+  line-height:1.05;
+}
+
+.logo-text strong{
+  display:block;
+  font-size:15px;
+  letter-spacing:.12em;
+}
+
+.logo-text span{
+  display:block;
+  margin-top:3px;
+  color:var(--muted);
+  font-size:9px;
+  letter-spacing:.22em;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:25px;
+}
+
+.nav-links a{
+  color:#d9dfe4;
+  font-size:13px;
+  font-weight:700;
+  transition:.2s ease;
+}
+
+.nav-links a:hover{
+  color:var(--sky);
+}
+
+.nav-cta{
+  padding:11px 17px;
+  border:1px solid rgba(85,199,255,.5);
+  border-radius:8px;
+  background:var(--sky);
+  color:#001018!important;
+}
+
+.nav-cta:hover{
+  background:#83d9ff;
+}
+
+.menu-btn{
+  display:none;
+  width:44px;
+  height:44px;
+  border:1px solid var(--line);
+  border-radius:9px;
+  background:var(--panel);
+  color:#fff;
+  font-size:20px;
+}
+
+/* HERO */
+
+.hero{
+  min-height:calc(100vh - 78px);
+  display:grid;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  width:650px;
+  height:650px;
+  right:-260px;
+  top:-220px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(85,199,255,.18),transparent 68%);
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.02fr .98fr;
+  gap:70px;
+  align-items:center;
+  position:relative;
+  z-index:1;
+}
+
+.hero h1{
+  max-width:760px;
+  margin-bottom:25px;
+  font-size:clamp(45px,7vw,82px);
+  line-height:.98;
+  letter-spacing:-.055em;
+}
+
+.hero h1 span{
+  color:var(--sky);
+}
+
+.hero-description{
+  max-width:650px;
+  margin-bottom:32px;
+  color:#b9c2c9;
+  font-size:18px;
+}
+
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.btn{
+  min-height:50px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:13px 21px;
+  border-radius:8px;
+  font-size:14px;
+  font-weight:800;
+  transition:.2s ease;
+}
+
+.btn-primary{
+  background:var(--sky);
+  color:#001018;
+}
+
+.btn-primary:hover{
+  background:#8bdcff;
+  transform:translateY(-2px);
+}
+
+.btn-secondary{
+  border:1px solid var(--line);
+  background:#101419;
+  color:#fff;
+}
+
+.btn-secondary:hover{
+  border-color:var(--sky);
+  color:var(--sky);
+}
+
+/* CAMERA VISUAL */
+
+.hero-visual{
+  min-height:470px;
+  position:relative;
+  display:grid;
+  place-items:center;
+}
+
+.camera-frame{
+  width:min(100%,500px);
+  aspect-ratio:4/3;
+  position:relative;
+  border:1px solid #27333c;
+  border-radius:20px;
+  background:
+    linear-gradient(145deg,#161d22,#080a0c);
+  box-shadow:0 35px 90px rgba(0,0,0,.55);
+}
+
+.camera-frame::before{
+  content:"LIVE";
+  position:absolute;
+  top:18px;
+  left:18px;
+  padding:6px 10px;
+  border-radius:5px;
+  background:#fff;
+  color:#111;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.12em;
+}
+
+.camera-frame::after{
+  content:"REC 00:42:18";
+  position:absolute;
+  right:18px;
+  top:20px;
+  color:var(--sky);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.1em;
+}
+
+.lens{
+  width:210px;
+  height:210px;
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  border:12px solid #29333a;
+  border-radius:50%;
+  background:
+    radial-gradient(circle,#050607 0 25%,#102531 26% 39%,#55c7ff 40% 42%,#10171c 43% 62%,#27333a 63% 69%,#07090a 70%);
+  box-shadow:
+    0 0 0 16px #11171b,
+    0 0 70px rgba(85,199,255,.18);
+}
+
+.lens::before{
+  content:"";
+  width:48px;
+  height:48px;
+  position:absolute;
+  top:28px;
+  left:42px;
+  border-radius:50%;
+  background:rgba(255,255,255,.25);
+  filter:blur(5px);
+}
+
+.camera-side{
+  position:absolute;
+  right:-28px;
+  top:50%;
+  width:70px;
+  height:125px;
+  transform:translateY(-50%);
+  border:1px solid #27333c;
+  border-left:0;
+  border-radius:0 14px 14px 0;
+  background:#151b20;
+}
+
+.camera-side::after{
+  content:"YSP";
+  position:absolute;
+  top:20px;
+  right:13px;
+  color:var(--sky);
+  font-size:10px;
+  font-weight:800;
+}
+
+.stat-card{
+  position:absolute;
+  bottom:-30px;
+  left:-35px;
+  padding:18px 20px;
+  border:1px solid #27333c;
+  border-radius:12px;
+  background:rgba(12,15,18,.95);
+  box-shadow:0 20px 45px rgba(0,0,0,.4);
+}
+
+.stat-card strong{
+  display:block;
+  font-size:28px;
+  color:var(--sky);
+}
+
+.stat-card span{
+  color:var(--muted);
+  font-size:11px;
+  font-weight:700;
+}
+
+/* TRUST */
+
+.trust{
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  background:#090b0d;
+}
+
+.trust-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+}
+
+.trust-item{
+  padding:26px 18px;
+  text-align:center;
+  border-right:1px solid var(--line);
+}
+
+.trust-item:last-child{
+  border-right:0;
+}
+
+.trust-item strong{
+  display:block;
+  margin-bottom:4px;
+  font-size:22px;
+}
+
+.trust-item span{
+  color:var(--muted);
+  font-size:11px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+
+/* SERVICES */
+
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+  margin-top:48px;
+}
+
+.service-card{
+  min-height:230px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  padding:24px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:linear-gradient(145deg,#101419,#0a0d10);
+  transition:.25s ease;
+}
+
+.service-card:hover{
+  transform:translateY(-5px);
+  border-color:rgba(85,199,255,.55);
+}
+
+.service-number{
+  color:var(--sky);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.1em;
+}
+
+.service-card h3{
+  margin:18px 0 8px;
+  font-size:19px;
+}
+
+.service-card p{
+  color:var(--muted);
+  font-size:13px;
+}
+
+.service-arrow{
+  align-self:flex-end;
+  color:var(--sky);
+  font-size:20px;
+}
+
+/* ABOUT */
+
+.about{
+  background:#090b0d;
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:70px;
+  align-items:center;
+}
+
+.about-visual{
+  min-height:430px;
+  display:flex;
+  align-items:flex-end;
+  padding:30px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:
+    linear-gradient(135deg,rgba(85,199,255,.08),transparent 55%),
+    repeating-linear-gradient(90deg,transparent 0 40px,rgba(255,255,255,.025) 40px 41px),
+    #0d1216;
+}
+
+.about-box{
+  width:100%;
+  padding:25px;
+  border:1px solid #293640;
+  border-radius:13px;
+  background:rgba(5,6,7,.9);
+}
+
+.about-box span{
+  display:block;
+  margin-bottom:8px;
+  color:var(--sky);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.15em;
+}
+
+.about-box strong{
+  font-size:26px;
+  line-height:1.15;
+}
+
+/* EQUIPMENT */
+
+.equipment-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+  margin-top:45px;
+}
+
+.equipment-card{
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:#0d1115;
+}
+
+.equipment-image{
+  height:180px;
+  position:relative;
+  display:grid;
+  place-items:center;
+  background:
+    radial-gradient(circle at center,rgba(85,199,255,.18),transparent 40%),
+    #11171c;
+}
+
+.equipment-image::after{
+  content:"YSP";
+  color:rgba(255,255,255,.08);
+  font-size:58px;
+  font-weight:800;
+  letter-spacing:.08em;
+}
+
+.equipment-info{
+  padding:20px;
+}
+
+.equipment-info h3{
+  margin-bottom:6px;
+  font-size:17px;
+}
+
+.equipment-info p{
+  color:var(--muted);
+  font-size:12px;
+}
+
+/* PORTFOLIO */
+
+.portfolio{
+  background:#090b0d;
+}
+
+.project{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:50px;
+  align-items:stretch;
+  margin-top:48px;
+}
+
+.project-visual{
+  min-height:380px;
+  display:flex;
+  align-items:flex-end;
+  padding:25px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:
+    linear-gradient(145deg,rgba(85,199,255,.13),transparent 50%),
+    #10151a;
+}
+
+.project-screen{
+  width:100%;
+  padding:20px;
+  border:1px solid #31404a;
+  border-radius:12px;
+  background:#060708;
+}
+
+.project-screen-top{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:25px;
+  color:var(--muted);
+  font-size:10px;
+  font-weight:800;
+}
+
+.project-screen-title{
+  margin-bottom:15px;
+  color:var(--sky);
+  font-size:26px;
+  font-weight:800;
+}
+
+.project-screen-lines{
+  display:grid;
+  gap:8px;
+}
+
+.project-screen-lines span{
+  height:7px;
+  border-radius:5px;
+  background:#202a31;
+}
+
+.project-screen-lines span:nth-child(2){
+  width:78%;
+}
+
+.project-screen-lines span:nth-child(3){
+  width:60%;
+}
+
+.project-info{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.project-info h3{
+  margin-bottom:20px;
+  font-size:clamp(30px,4vw,48px);
+  line-height:1.05;
+}
+
+.project-meta{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+  margin-bottom:25px;
+}
+
+.meta{
+  padding:15px;
+  border:1px solid var(--line);
+  border-radius:9px;
+  background:#0e1317;
+}
+
+.meta span{
+  display:block;
+  margin-bottom:4px;
+  color:var(--muted);
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+}
+
+.meta strong{
+  font-size:13px;
+}
+
+/* WHY */
+
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  margin-top:45px;
+}
+
+.why-card{
+  padding:25px;
+  border-top:2px solid var(--sky);
+  background:#0e1216;
+}
+
+.why-card h3{
+  margin-bottom:9px;
+  font-size:17px;
+}
+
+.why-card p{
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* CTA */
+
+.cta{
+  padding:85px 0;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  background:
+    radial-gradient(circle at 80% 50%,rgba(85,199,255,.15),transparent 38%),
+    #080a0c;
+}
+
+.cta-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:40px;
+}
+
+.cta h2{
+  max-width:700px;
+  font-size:clamp(34px,5vw,62px);
+  line-height:1;
+  letter-spacing:-.04em;
+}
+
+/* CONTACT */
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:65px;
+}
+
+.contact-details{
+  display:grid;
+  gap:12px;
+  margin-top:30px;
+}
+
+.contact-item{
+  padding:17px;
+  border:1px solid var(--line);
+  border-radius:10px;
+  background:#0d1115;
+}
+
+.contact-item span{
+  display:block;
+  margin-bottom:4px;
+  color:var(--muted);
+  font-size:10px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+}
+
+.contact-item strong{
+  font-size:14px;
+}
+
+.form{
+  padding:30px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:#0d1115;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+}
+
+.form label{
+  display:block;
+  margin-bottom:7px;
+  color:#dce2e6;
+  font-size:12px;
+  font-weight:700;
+}
+
+.form input,
+.form select,
+.form textarea{
+  width:100%;
+  padding:14px;
+  border:1px solid #29343c;
+  border-radius:8px;
+  outline:none;
+  background:#07090b;
+  color:#fff;
+}
+
+.form input:focus,
+.form select:focus,
+.form textarea:focus{
+  border-color:var(--sky);
+  box-shadow:0 0 0 3px rgba(85,199,255,.1);
+}
+
+.form textarea{
+  min-height:135px;
+  resize:vertical;
+}
+
+.field{
+  margin-bottom:15px;
+}
+
+/* FOOTER */
+
+footer{
+  padding:45px 0 25px;
+  background:#030405;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.4fr .8fr .8fr;
+  gap:45px;
+  padding-bottom:35px;
+  border-bottom:1px solid var(--line);
+}
+
+.footer-title{
+  margin-bottom:12px;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+
+.footer-text{
+  max-width:390px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.footer-links{
+  display:grid;
+  gap:9px;
+}
+
+.footer-links a{
+  color:var(--muted);
+  font-size:13px;
+}
+
+.footer-links a:hover{
+  color:var(--sky);
+}
+
+.footer-bottom{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  padding-top:22px;
+  color:#737d85;
+  font-size:11px;
+}
+
+/* BACK TO TOP */
+
+.top{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  z-index:900;
+  width:44px;
+  height:44px;
+  display:grid;
+  place-items:center;
+  border:1px solid var(--line);
+  border-radius:9px;
+  background:#0c1115;
+  color:var(--sky);
+  opacity:0;
+  pointer-events:none;
+  transition:.2s ease;
+}
+
+.top.show{
+  opacity:1;
+  pointer-events:auto;
+}
+
+/* MOBILE */
+
+@media(max-width:980px){
+
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:78px;
+    left:20px;
+    right:20px;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+    padding:10px;
+    border:1px solid var(--line);
+    border-radius:12px;
+    background:#090c0f;
+  }
+
+  .nav-links.open{
+    display:flex;
+  }
+
+  .nav-links a{
+    padding:13px;
+  }
+
+  .nav-cta{
+    text-align:center;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .hero-grid,
+  .about-grid,
+  .project,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero-visual{
+    min-height:410px;
+  }
+
+  .services-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .equipment-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .why-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .cta-inner{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:620px){
+
+  .container{
+    width:min(calc(100% - 28px),var(--max));
+  }
+
+  .section{
+    padding:75px 0;
+  }
+
+  .hero{
+    min-height:auto;
+    padding:75px 0;
+  }
+
+  .hero h1{
+    font-size:clamp(42px,13vw,64px);
+  }
+
+  .hero-description{
+    font-size:16px;
+  }
+
+  .hero-visual{
+    min-height:350px;
+  }
+
+  .camera-frame{
+    width:94%;
+  }
+
+  .lens{
+    width:145px;
+    height:145px;
+  }
+
+  .camera-side{
+    width:45px;
+    right:-12px;
+  }
+
+  .stat-card{
+    left:0;
+    bottom:-20px;
+  }
+
+  .trust-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .trust-item:nth-child(2){
+    border-right:0;
+  }
+
+  .trust-item:nth-child(-n+2){
+    border-bottom:1px solid var(--line);
+  }
+
+  .services-grid,
+  .equipment-grid,
+  .why-grid{
+    grid-template-columns:1fr;
+  }
+
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+
+  .project-meta{
+    grid-template-columns:1fr;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+
+  .footer-bottom{
+    flex-direction:column;
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+
+```
+<a href="#home" class="logo">
+  <div class="logo-mark">Y</div>
+  <div class="logo-text">
+    <strong>YUSASIV</strong>
+    <span>STUDIO PRO</span>
+  </div>
+</a>
+
+<nav class="nav-links" id="navLinks">
+  <a href="#home">Home</a>
+  <a href="#services">Services</a>
+  <a href="#equipment">Equipment</a>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+  <a href="#contact" class="nav-cta">Book a Production</a>
+</nav>
+
+<button class="menu-btn" id="menuBtn" type="button" aria-label="Open navigation">
+  ☰
+</button>
+```
+
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="container hero-grid">
+
+```
+<div>
+  <div class="eyebrow">Live Production • Streaming • Media</div>
+
+  <h1>
+    WE CAPTURE.<br>
+    WE CREATE.<br>
+    <span>WE DELIVER.</span>
+  </h1>
+
+  <p class="hero-description">
+    Professional live production, multi-camera streaming, equipment rental and post-production services for concerts, conferences, religious events and more.
+  </p>
+
+  <div class="hero-actions">
+    <a href="#services" class="btn btn-primary">Explore Our Services</a>
+    <a href="#contact" class="btn btn-secondary">Book a Production</a>
+  </div>
+</div>
+
+<div class="hero-visual">
+
+  <div class="camera-frame">
+
+    <div class="lens"></div>
+    <div class="camera-side"></div>
+
+    <div class="stat-card">
+      <strong>6+</strong>
+      <span>YEARS EXPERIENCE</span>
+    </div>
+
+  </div>
+
+</div>
+```
+
+  </div>
+</section>
+
+<section class="trust">
+  <div class="container trust-grid">
+
+```
+<div class="trust-item">
+  <strong>2–10+</strong>
+  <span>Camera Coverage</span>
+</div>
+
+<div class="trust-item">
+  <strong>4K</strong>
+  <span>High Resolution</span>
+</div>
+
+<div class="trust-item">
+  <strong>Multi</strong>
+  <span>Platform Streaming</span>
+</div>
+
+<div class="trust-item">
+  <strong>24/7</strong>
+  <span>Technical Backup</span>
+</div>
+```
+
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="container">
+
+```
+<div class="eyebrow">What We Do</div>
+
+<h2 class="section-title">
+  Production built around your event.
+</h2>
+
+<p class="section-text">
+  From camera operation and live switching to streaming, audio and post-production, YUSASIV Studio Pro handles the technical side so your audience can focus on the experience.
+</p>
+
+<div class="services-grid">
+
+  <article class="service-card">
+    <span class="service-number">01</span>
+    <div>
+      <h3>Multi-Camera Livestreaming</h3>
+      <p>Professional multi-camera coverage with multiple angles and broadcast-grade live production.</p>
+    </div>
+    <span class="service-arrow">↗</span>
+  </article>
+
+  <article class="service-card">
+    <span class="service-number">02</span>
+    <div>
+      <h3>Live Production Crew</h3>
+      <p>Experienced technical directors, camera operators, system engineers and live stream managers.</p>
+    </div>
+    <span class="service-arrow">↗</span>
+  </article>
+
+  <article class="service-card">
+    <span class="service-number">03</span>
+    <div>
+      <h3>Live Video Switching</h3>
+      <p>Real-time camera switching and professional graphics for a polished live production.</p>
+    </div>
+    <span class="service-arrow">↗</span>
+  </article>
+
+  <article class="service-card">
+    <span class="service-number">04</span>
+    <div>
+      <h3>Professional Audio</h3>
+      <p>Professional audio capture and mixing integrated into the live production workflow.</p>
+    </div>
+    <span class="service-arrow">↗</span>
+  </article>
+
+  <article class="service-card">
+    <span class="service-number">05</span>
+    <div>
+      <h3>Multi-Platform Streaming</h3>
+      <p>Stream simultaneously to YouTube, Facebook, Instagram and custom RTMP destinations.</p>
+    </div>
+    <span class="service-arrow">↗</span>
+  </article>
+
+  <article class="service-card">
+    <span class="service-number">06</span>
+    <div>
+      <h3>Internet Redundancy</h3>
+      <p>Dual ISP, MTN 5G, Airtel 4G and backup connectivity solutions for dependable streaming.</p>
+    </div>
+    <span class="service-arrow">↗</span>
+  </article>
+
+  <article class="service-card">
+    <span class="service-number">07</span>
+    <div>
+      <h3>Recording & Archiving</h3>
+      <p>Full HD and 4K recording with SSD backup for reliable event preservation.</p>
+    </div>
+    <span class="service-arrow">↗</span>
+  </article>
+
+  <article class="service-card">
+    <span class="service-number">08</span>
+    <div>
+      <h3>Post-Production</h3>
+      <p>Professional editing, highlights, promotional clips and post-event content.</p>
+    </div>
+    <span class="service-arrow">↗</span>
+  </article>
+
+</div>
+```
+
+  </div>
+</section>
+
+<section class="section about" id="about">
+  <div class="container about-grid">
+
+```
+<div class="about-visual">
+  <div class="about-box">
+    <span>YUSASIV STUDIO PRO</span>
+    <strong>EVERY ANGLE.<br>EVERY MOMENT.<br>SEAMLESSLY DELIVERED.</strong>
+  </div>
+</div>
+
+<div>
+  <div class="eyebrow">About YUSASIV</div>
+
+  <h2 class="section-title">
+    Experience meets technical precision.
+  </h2>
+
+  <p class="section-text">
+    Yusasiv Studio Pro is a leading provider of multi-camera livestreaming services, delivering high-quality, broadcast-grade live video for concerts, conferences, religious events and more.
+  </p>
+
+  <p class="section-text" style="margin-top:18px;">
+    With over six years of experience, Yusasiv Studio Pro combines technical expertise with creative storytelling to ensure every event is captured from every angle and streamed flawlessly to any platform.
+  </p>
+
+  <a href="#contact" class="btn btn-primary" style="margin-top:28px;">
+    Learn More
+  </a>
+</div>
+```
+
+  </div>
+</section>
+
+<section class="section" id="equipment">
+  <div class="container">
+
+```
+<div class="eyebrow">Equipment Rental</div>
+
+<h2 class="section-title">
+  Professional gear for your vision.
+</h2>
+
+<p class="section-text">
+  Access professional production equipment for livestreaming, event coverage, recording and broadcast workflows.
+</p>
+
+<div class="equipment-grid">
+
+  <article class="equipment-card">
+    <div class="equipment-image"></div>
+    <div class="equipment-info">
+      <h3>Sony PXW-FS7</h3>
+      <p>Professional 4K production camera.</p>
+    </div>
+  </article>
+
+  <article class="equipment-card">
+    <div class="equipment-image"></div>
+    <div class="equipment-info">
+      <h3>Hollyland Pyro S</h3>
+      <p>Professional wireless video transmission.</p>
+    </div>
+  </article>
+
+  <article class="equipment-card">
+    <div class="equipment-image"></div>
+    <div class="equipment-info">
+      <h3>GoStream Deck</h3>
+      <p>Professional live streaming production equipment.</p>
+    </div>
+  </article>
+
+  <article class="equipment-card">
+    <div class="equipment-image"></div>
+    <div class="equipment-info">
+      <h3>Unisheen Capture Card</h3>
+      <p>Reliable video capture for production workflows.</p>
+    </div>
+  </article>
+
+</div>
+```
+
+  </div>
+</section>
+
+<section class="section portfolio" id="portfolio">
+  <div class="container">
+
+```
+<div class="eyebrow">Our Work</div>
+
+<h2 class="section-title">
+  Featured project.
+</h2>
+
+<div class="project">
+
+  <div class="project-visual">
+    <div class="project-screen">
+
+      <div class="project-screen-top">
+        <span>YUSASIV LIVE PRODUCTION</span>
+        <span>LIVE / 2026</span>
+      </div>
+
+      <div class="project-screen-title">
+        LAGOS BUSINESS<br>OF FILM SUMMIT
+      </div>
+
+      <div class="project-screen-lines">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="project-info">
+
+    <h3>The Lagos Business of Film Summit</h3>
+
+    <div class="project-meta">
+
+      <div class="meta">
+        <span>Date</span>
+        <strong>January 30, 2026</strong>
+      </div>
+
+      <div class="meta">
+        <span>Client</span>
+        <strong>Miss Katty</strong>
+      </div>
+
+      <div class="meta">
+        <span>Event Type</span>
+        <strong>Conference</strong>
+      </div>
+
+      <div class="meta">
+        <span>Role</span>
+        <strong>Technical Director</strong>
+      </div>
+
+    </div>
+
+    <p class="section-text">
+      YUSASIV Studio Pro handled live video mixing and overall technical execution, delivering a professional multi-camera production for the event.
+    </p>
+
+    <a href="#contact" class="btn btn-secondary" style="width:max-content;margin-top:28px;">
+      View Case Study
+    </a>
+
+  </div>
+
+</div>
+```
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+```
+<div class="eyebrow">Why YUSASIV</div>
+
+<h2 class="section-title">
+  Built for professionals. Trusted for results.
+</h2>
+
+<div class="why-grid">
+
+  <article class="why-card">
+    <h3>Proven Track Record</h3>
+    <p>More than six years of experience delivering professional live production and streaming services.</p>
+  </article>
+
+  <article class="why-card">
+    <h3>Experienced Team & Equipment</h3>
+    <p>Skilled production personnel supported by professional cameras, switchers, audio and streaming systems.</p>
+  </article>
+
+  <article class="why-card">
+    <h3>Customized Solutions</h3>
+    <p>Production setups are designed around the size, format and requirements of each event.</p>
+  </article>
+
+  <article class="why-card">
+    <h3>Reliable Internet Backup</h3>
+    <p>Backup connectivity solutions help protect livestreams from unexpected network interruptions.</p>
+  </article>
+
+  <article class="why-card">
+    <h3>Comprehensive Service</h3>
+    <p>From cameras and audio to switching, streaming, recording and post-production.</p>
+  </article>
+
+  <article class="why-card">
+    <h3>Competitive Pricing</h3>
+    <p>Professional production solutions designed to provide value without compromising quality.</p>
+  </article>
+
+</div>
+```
+
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container cta-inner">
+
+```
+<h2>Your event deserves more than just a camera. It deserves a production.</h2>
+
+<a href="#contact" class="btn btn-primary">
+  Book a Production
+</a>
+```
+
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="container contact-grid">
+
+```
+<div>
+
+  <div class="eyebrow">Contact YUSASIV</div>
+
+  <h2 class="section-title">
+    Your event.<br>Our expertise.
+  </h2>
+
+  <p class="section-text">
+    Tell us what you are planning and our team will get back to you with the right production solution.
+  </p>
+
+  <div class="contact-details">
+
+    <a class="contact-item" href="tel:+2347084496771">
+      <span>Phone</span>
+      <strong>+234 708 449 6771</strong>
+    </a>
+
+    <a class="contact-item" href="mailto:yusasivstudio@gmail.com">
+      <span>Email</span>
+      <strong>yusasivstudio@gmail.com</strong>
+    </a>
+
+    <div class="contact-item">
+      <span>Location</span>
+      <strong>6B, Abayomi Street, Oregun, Ikeja, Lagos, Nigeria, Africa</strong>
+    </div>
+
+    <a class="contact-item" href="https://instagram.com/yusasiv_studio_pro" target="_blank" rel="noopener">
+      <span>Instagram</span>
+      <strong>@yusasiv_studio_pro</strong>
+    </a>
+
+  </div>
+
+</div>
+
+<form class="form" id="quoteForm">
+
+  <div class="form-grid">
+
+    <div class="field">
+      <label for="name">Your Name</label>
+      <input id="name" type="text" placeholder="Full name" required>
+    </div>
+
+    <div class="field">
+      <label for="phone">Phone Number</label>
+      <input id="phone" type="tel" placeholder="Phone number" required>
+    </div>
+
+  </div>
+
+  <div class="field">
+    <label for="eventType">Event Type</label>
+
+    <select id="eventType" required>
+      <option value="">Select event type</option>
+      <option>Conference</option>
+      <option>Concert</option>
+      <option>Religious Event</option>
+      <option>Wedding</option>
+      <option>Corporate Event</option>
+      <option>Film / Media Event</option>
+      <option>Other</option>
+    </select>
+  </div>
+
+  <div class="field">
+    <label for="message">Tell Us About Your Event</label>
+
+    <textarea id="message" placeholder="Date, location, expected audience, production needs..." required></textarea>
+  </div>
+
+  <button class="btn btn-primary" type="submit" style="width:100%;border:0;">
+    Send Request
+  </button>
+
+</form>
+```
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+
+  <div class="container">
+
+```
+<div class="footer-grid">
+
+  <div>
+    <div class="logo">
+      <div class="logo-mark">Y</div>
+
+      <div class="logo-text">
+        <strong>YUSASIV</strong>
+        <span>STUDIO PRO</span>
+      </div>
+    </div>
+
+    <p class="footer-text" style="margin-top:18px;">
+      Professional live production, multi-camera streaming, equipment rental and post-production services.
+    </p>
+  </div>
+
+  <div>
+    <div class="footer-title">Quick Links</div>
+
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#equipment">Equipment</a>
+      <a href="#portfolio">Portfolio</a>
+    </div>
+  </div>
+
+  <div>
+    <div class="footer-title">Contact</div>
+
+    <div class="footer-links">
+      <a href="tel:+2347084496771">+234 708 449 6771</a>
+      <a href="mailto:yusasivstudio@gmail.com">yusasivstudio@gmail.com</a>
+      <a href="https://instagram.com/yusasiv_studio_pro" target="_blank" rel="noopener">@yusasiv_studio_pro</a>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer-bottom">
+  <span>© 2026 YUSASIV Studio Pro. All rights reserved.</span>
+
+  <span>Professional Live Production & Streaming</span>
+</div>
+```
+
+  </div>
+
+</footer>
+
+<a href="#home" class="top" id="topBtn" aria-label="Back to top">↑</a>
+
+<script>
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click",function(){
+
+  navLinks.classList.toggle("open");
+
+  const isOpen = navLinks.classList.contains("open");
+
+  menuBtn.setAttribute("aria-label",isOpen ? "Close navigation" : "Open navigation");
+
+});
+
+document.querySelectorAll(".nav-links a").forEach(link=>{
+
+  link.addEventListener("click",()=>{
+
+    navLinks.classList.remove("open");
+
+    menuBtn.setAttribute("aria-label","Open navigation");
+
+  });
+
+});
+
+const topBtn = document.getElementById("topBtn");
+
+window.addEventListener("scroll",()=>{
+
+  if(window.scrollY > 500){
+    topBtn.classList.add("show");
+  }else{
+    topBtn.classList.remove("show");
+  }
+
+});
+
+document.getElementById("quoteForm").addEventListener("submit",function(event){
+
+  event.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const eventType = document.getElementById("eventType").value;
+  const message = document.getElementById("message").value.trim();
+
+  const whatsappMessage =
+`Hello YUSASIV Studio Pro,
+
+I would like to make a production enquiry.
+
+Name: ${name}
+Phone: ${phone}
+Event Type: ${eventType}
+
+Event Details:
+${message}`;
+
+  const whatsappUrl =
+    "https://wa.me/2347084496771?text=" +
+    encodeURIComponent(whatsappMessage);
+
+  window.open(whatsappUrl,"_blank");
+
+});
+
+</script>
+
+</body>
+</html>
