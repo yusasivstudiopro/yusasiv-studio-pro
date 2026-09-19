@@ -148,11 +148,7 @@ footer{padding:45px 0 25px;background:#030405;}
 <a class="wa" href="#" id="waBtn">WA</a>
 <script>
 document.getElementById("menuBtn").addEventListener("click",function(){document.getElementById("navLinks").classList.toggle("open");});
-function lockBooking(e){
-  if(e) e.preventDefault();
-  alert("Booking is locked until the website balance is paid.");
-  return false;
-}
+function lockBooking(e){if(e)e.preventDefault();alert("Booking is locked until the website balance is paid.");return false;}
 document.getElementById("quoteForm").addEventListener("submit",lockBooking);
 document.getElementById("waBtn").addEventListener("click",lockBooking);
 </script>
