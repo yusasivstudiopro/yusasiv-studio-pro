@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Production | YUSASIV Studio Pro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--black:#050607;--panel:#11161b;--white:#fff;--muted:#aab3bb;--line:#263039;--sky:#55c7ff;--sky-soft:rgba(85,199,255,.12);--max:1180px;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:"Manrope",sans-serif;background:var(--black);color:var(--white);line-height:1.6;}
+a{color:inherit;text-decoration:none;}
+button,input,select,textarea{font:inherit;}
+button{cursor:pointer;}
+.container{width:min(calc(100% - 40px),var(--max));margin:auto;}
+.section{padding:90px 0;}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:18px;color:var(--sky);font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--sky);}
+.section-title{margin-bottom:18px;font-size:clamp(34px,5vw,58px);line-height:1.05;letter-spacing:-.04em;}
+.section-text{max-width:680px;color:var(--muted);font-size:17px;}
+header{position:sticky;top:0;z-index:1000;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(5,6,7,.94);}
+.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:28px;}
+.logo{display:flex;align-items:center;gap:11px;font-weight:800;}
+.logo-mark{width:42px;height:42px;display:grid;place-items:center;border:1px solid rgba(85,199,255,.5);border-radius:10px;background:var(--sky-soft);color:var(--sky);font-size:19px;font-weight:800;}
+.logo-text strong{display:block;font-size:15px;letter-spacing:.12em;}
+.logo-text span{display:block;margin-top:3px;color:var(--muted);font-size:9px;letter-spacing:.22em;}
+.nav-links{display:flex;align-items:center;gap:25px;}
+.nav-links a{color:#d9dfe4;font-size:13px;font-weight:700;}
+.nav-links a:hover,.nav-links a.active{color:var(--sky);}
+.nav-cta{padding:11px 17px;border-radius:8px;background:var(--sky);color:#001018!important;}
+.menu-btn{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:9px;background:var(--panel);color:#fff;font-size:20px;}
+.btn{min-height:50px;display:inline-flex;align-items:center;justify-content:center;padding:13px 21px;border:0;border-radius:8px;font-size:14px;font-weight:800;}
+.btn-primary{background:var(--sky);color:#001018;width:100%;}
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:65px;align-items:start;}
+.contact-details{display:grid;gap:12px;margin-top:30px;}
+.contact-item{padding:17px;border:1px solid var(--line);border-radius:10px;background:#0d1115;}
+.contact-item span{display:block;margin-bottom:4px;color:var(--muted);font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;}
+.contact-item strong{font-size:14px;}
+.form{padding:30px;border:1px solid var(--line);border-radius:16px;background:#0d1115;}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.form label{display:block;margin-bottom:7px;color:#dce2e6;font-size:12px;font-weight:700;}
+.form input,.form select,.form textarea{width:100%;padding:14px;border:1px solid #29343c;border-radius:8px;outline:none;background:#07090b;color:#fff;}
+.form textarea{min-height:135px;}
+.field{margin-bottom:15px;}
+footer{padding:45px 0 25px;background:#030405;}
+.footer-grid{display:grid;grid-template-columns:1.4fr .8fr .8fr;gap:45px;padding-bottom:35px;border-bottom:1px solid var(--line);}
+.footer-title{margin-bottom:12px;font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;}
+.footer-text{color:var(--muted);font-size:13px;}
+.footer-links{display:grid;gap:9px;}
+.footer-links a{color:var(--muted);font-size:13px;}
+.footer-bottom{display:flex;justify-content:space-between;padding-top:22px;color:#737d85;font-size:11px;}
+@media(max-width:980px){
+  .nav-links{display:none;position:absolute;top:78px;left:20px;right:20px;flex-direction:column;padding:10px;border:1px solid var(--line);border-radius:12px;background:#090c0f;}
+  .nav-links.open{display:flex;}
+  .nav-links a{padding:13px;}
+  .menu-btn{display:block;}
+  .contact-grid,.footer-grid{grid-template-columns:1fr;}
+}
+@media(max-width:620px){.form-grid{grid-template-columns:1fr;}.footer-bottom{flex-direction:column;gap:10px;}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a href="index.html" class="logo">
+      <div class="logo-mark">Y</div>
+      <div class="logo-text"><strong>YUSASIV</strong><span>STUDIO PRO</span></div>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#equipment">Equipment</a>
+      <a href="index.html#portfolio">Portfolio</a>
+      <a href="index.html#about">About</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="contact.html" class="nav-cta">Book a Production</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" type="button">☰</button>
+  </div>
+</header>
+<main>
+<section class="section">
+  <div class="container contact-grid">
+    <div>
+      <div class="eyebrow">Contact YUSASIV</div>
+      <h1 class="section-title">Your event.<br>Our expertise.</h1>
+      <p class="section-text">Tell us what you are planning and our team will get back to you with the right production solution.</p>
+      <div class="contact-details">
+        <a class="contact-item" href="tel:+2347084496771"><span>Phone</span><strong>+234 708 449 6771</strong></a>
+        <a class="contact-item" href="mailto:yusasivstudio@gmail.com"><span>Email</span><strong>yusasivstudio@gmail.com</strong></a>
+        <div class="contact-item"><span>Location</span><strong>6B, Abayomi Street, Oregun, Ikeja, Lagos, Nigeria</strong></div>
+        <a class="contact-item" href="https://instagram.com/yusasiv_studio_pro" target="_blank" rel="noopener"><span>Instagram</span><strong>@yusasiv_studio_pro</strong></a>
+      </div>
+    </div>
+    <form class="form" id="quoteForm">
+      <div class="form-grid">
+        <div class="field"><label for="name">Your Name</label><input id="name" type="text" placeholder="Full name" required></div>
+        <div class="field"><label for="phone">Phone Number</label><input id="phone" type="tel" placeholder="Phone number" required></div>
+      </div>
+      <div class="field">
+        <label for="eventType">Event Type</label>
+        <select id="eventType" required>
+          <option value="">Select event type</option>
+          <option>Conference</option>
+          <option>Concert</option>
+          <option>Religious Event</option>
+          <option>Wedding</option>
+          <option>Corporate Event</option>
+          <option>Film / Media Event</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="message">Tell Us About Your Event</label>
+        <textarea id="message" placeholder="Date, location, expected audience, production needs..." required></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit">Send Request</button>
+    </form>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo"><div class="logo-mark">Y</div><div class="logo-text"><strong>YUSASIV</strong><span>STUDIO PRO</span></div></div>
+        <p class="footer-text" style="margin-top:18px;">Professional live production, multi-camera streaming, equipment rental and post-production services.</p>
+      </div>
+      <div>
+        <div class="footer-title">Quick Links</div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="index.html#services">Services</a>
+          <a href="index.html#equipment">Equipment</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-title">Contact</div>
+        <div class="footer-links">
+          <a href="tel:+2347084496771">+234 708 449 6771</a>
+          <a href="mailto:yusasivstudio@gmail.com">yusasivstudio@gmail.com</a>
+          <a href="https://instagram.com/yusasiv_studio_pro" target="_blank" rel="noopener">@yusasiv_studio_pro</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 YUSASIV Studio Pro. All rights reserved.</span>
+      <span>Professional Live Production & Streaming</span>
+    </div>
+  </div>
+</footer>
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+menuBtn.addEventListener("click", function(){ navLinks.classList.toggle("open"); });
+document.querySelectorAll(".nav-links a").forEach(function(link){
+  link.addEventListener("click", function(){ navLinks.classList.remove("open"); });
+});
+document.getElementById("quoteForm").addEventListener("submit", function(event){
+  event.preventDefault();
+  var name = document.getElementById("name").value.trim();
+  var phone = document.getElementById("phone").value.trim();
+  var eventType = document.getElementById("eventType").value;
+  var message = document.getElementById("message").value.trim();
+  var text = "Hello YUSASIV Studio Pro,\n\nI would like to make a production enquiry.\n\nName: " + name + "\nPhone: " + phone + "\nEvent Type: " + eventType + "\n\nEvent Details:\n" + message;
+  window.open("https://wa.me/2347084496771?text=" + encodeURIComponent(text), "_blank");
+});
+</script>
+</body>
+</html>
