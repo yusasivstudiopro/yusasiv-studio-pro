@@ -37,7 +37,7 @@ header{position:sticky;top:0;z-index:1000;border-bottom:1px solid rgba(255,255,2
 .btn{min-height:50px;display:inline-flex;align-items:center;justify-content:center;padding:13px 21px;border-radius:8px;font-size:14px;font-weight:800;}
 .btn-primary{background:var(--sky);color:#001018;}
 .btn-secondary{border:1px solid var(--line);background:#101419;color:#fff;}
-.hero-photo<img class="hero-photo" alt="Live production" src="hero.jpg">
+.hero-photo{width:100%;height:430px;object-fit:cover;border-radius:18px;}
 .trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#090b0d;}
 .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);}
 .trust-item{padding:26px 18px;text-align:center;border-right:1px solid var(--line);}
@@ -89,8 +89,6 @@ footer{padding:45px 0 25px;background:#030405;}
 .wa{position:fixed;right:20px;bottom:20px;z-index:1100;width:58px;height:58px;display:grid;place-items:center;border-radius:50%;background:#25D366;color:#fff;font-weight:800;}
 .top{position:fixed;right:20px;bottom:88px;width:44px;height:44px;display:grid;place-items:center;border:1px solid var(--line);border-radius:9px;background:#0c1115;color:var(--sky);opacity:0;pointer-events:none;}
 .top.show{opacity:1;pointer-events:auto;}
-#unpaid-lock{position:fixed;inset:0;z-index:3000;display:grid;place-items:center;background:rgba(5,6,7,.42);pointer-events:none;}
-.unpaid-lock-text{text-align:center;color:#55c7ff;font-family:"Playfair Display",serif;font-weight:700;font-size:clamp(32px,7vw,84px);line-height:.95;letter-spacing:-.03em;text-transform:uppercase;text-shadow:0 8px 40px rgba(0,0,0,.7);}
 @media(max-width:980px){
 .brand-logo{height:88px;max-width:220px;}
 .nav-links{display:none;position:absolute;top:78px;left:20px;right:20px;flex-direction:column;padding:10px;border:1px solid var(--line);border-radius:12px;background:#090c0f;}
@@ -106,7 +104,6 @@ footer{padding:45px 0 25px;background:#030405;}
 </style>
 </head>
 <body>
-<div id="unpaid-lock"><div class="unpaid-lock-text">PREVIEW ONLY<br>PAY THE BALANCE<br>TO LIFT THIS</div></div>
 <header>
 <div class="container nav">
 <a href="index.html"><img src="logo.jpg" alt="YUSASIV Studio Pro" class="brand-logo"></a>
@@ -135,7 +132,7 @@ footer{padding:45px 0 25px;background:#030405;}
 <a href="contact.html" class="btn btn-secondary">Book a Production</a>
 </div>
 </div>
-<img class="hero-photo" <img class="hero-photo" alt="Live production" src="hero.jpg">
+<img class="hero-photo" alt="Live production" src="hero.jpg">
 </div>
 </section>
 <section class="trust">
@@ -232,7 +229,7 @@ footer{padding:45px 0 25px;background:#030405;}
 <div class="work-grid">
 <article class="work-card"><img alt="Summit" src="video production setup.jpg"><div><h3>Lagos Business of Film Summit</h3><p>Technical direction and live mix. Jan 2026.</p></div></article>
 <article class="work-card"><img alt="Corporate" src="corporate brand.jpg"><div><h3>Brand / Corporate Production</h3><p>Multi-camera coverage for brands and corporate events.</p></div></article>
-<arti<article class="work-card"><img alt="Church" src="religious.jpg"><div><h3>Religious Event Production</h3><p>Livestream with redundant internet and archive.</p></div></article>
+<article class="work-card"><img alt="Church" src="religious.jpg"><div><h3>Religious Event Production</h3><p>Livestream with redundant internet and archive.</p></div></article>
 </div>
 </div>
 </section>
@@ -288,14 +285,13 @@ footer{padding:45px 0 25px;background:#030405;}
 </div>
 </div>
 </footer>
-<a class="wa" href="#" id="waBtn">WA</a>
-<a href="index.html" class="top" id="topBtn">↑</a>
+<a class="wa" href="https://wa.me/2347084496771" id="waBtn" target="_blank" rel="noopener">WA</a>
+<a href="#" class="top" id="topBtn">↑</a>
 <script>
 document.getElementById("menuBtn").addEventListener("click",function(){document.getElementById("navLinks").classList.toggle("open");});
 document.querySelectorAll(".nav-links a").forEach(function(a){a.addEventListener("click",function(){document.getElementById("navLinks").classList.remove("open");});});
 window.addEventListener("scroll",function(){document.getElementById("topBtn").classList.toggle("show",window.scrollY>500);});
-function lockBooking(e){if(e)e.preventDefault();alert("Booking is locked until the website balance is paid.");return false;}
-document.getElementById("waBtn").addEventListener("click",lockBooking);
+document.getElementById("topBtn").addEventListener("click",function(e){e.preventDefault();window.scrollTo({top:0,behavior:"smooth"});});
 </script>
 </body>
 </html>
